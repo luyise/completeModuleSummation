@@ -22,9 +22,17 @@ Definition is_lim_seq {A : AbsRing} {E : NormedModule A}
     (u : nat -> E) (l : E) : Prop :=
         filterlim u eventually (locally l).
 
+Definition convergent_seq {A : AbsRing} {E : NormedModule A}
+    (u : nat -> E) : Prop :=
+        ∃ l : E, is_lim_seq u l.
+
 Definition serie {A : AbsRing} {E : NormedModule A} 
     (u : nat -> E) : nat -> E :=
         (fun n => sum_n u n) : nat -> E.
+
+Definition convergent_serie {A : AbsRing} {E : NormedModule A}
+    (u : nat -> E) : Prop :=
+        convergent_seq (serie u).
 
 Section normal_convergence.
 
