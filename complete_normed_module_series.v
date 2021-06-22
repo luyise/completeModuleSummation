@@ -1,7 +1,6 @@
 
 From Coq Require Import
     ssreflect
-    ssrsearch
     Utf8
     Rdefinitions
     Rbasic_fun

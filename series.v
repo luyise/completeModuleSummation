@@ -6,7 +6,6 @@ This formalisation use the Coquelicot library.
 
 From Coq Require Import
     ssreflect
-    ssrsearch
     Utf8
     Psatz
 
